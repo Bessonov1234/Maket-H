@@ -1,0 +1,147 @@
+$main-color: #323264;
+$main-alt-color: #46466e;
+$main-soft-color: #686887;
+$active-regular: #24a3ff;
+@use "./basic";
+@mixin _1600 {
+  @media all and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin _1024 {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin _768 {
+  @media all and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin _650 {
+  @media all and (max-width: 650px) {
+    @content;
+  }
+}
+@mixin _450 {
+  @media all and (max-width: 450px) {
+    @content;
+  }
+}
+@mixin _375 {
+  @media all and (max-width: 375px) {
+    @content;
+  }
+}
+.footer {
+  max-width: 100%;
+  background: #f5f5fa;
+  padding: 30px 0 0 0;
+
+  &__conteiner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 60px 30px;
+    @include _1600 {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0px 160px 30px;
+    }
+  }
+  &__blok {
+    border-top: 2px solid #e6e6f0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    @include _650() {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    &__location {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      @include _650() {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        @include _650() {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        &__place {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: $main-color;
+        }
+        &__maps {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: $active-regular;
+        }
+      }
+    }
+
+    &__betwwen__point {
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      background: #b3b3ba;
+      margin: 0 10px;
+      @include _650() {
+        display: none;
+      }
+    }
+
+    &__contact__link {
+      display: flex;
+      align-items: center;
+      @include _650() {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &__contact {
+        width: 38px;
+        height: 38px;
+      }
+      &__nomber {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: $main-alt-color;
+      }
+      &__relations {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $active-regular;
+      }
+    }
+    &__subtitle {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+      color: #b3b3ba;
+    }
+  }
+}
