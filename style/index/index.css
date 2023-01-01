@@ -25,12 +25,6 @@ img {
 .fa-xmark {
   display: none;
 }
-@media all and (max-width: 600px) {
-  .fa-xmark {
-    display: block;
-  }
-}
-
 @media screen and (max-width: 600px) {
   [for=burger] {
     display: block;
@@ -39,13 +33,11 @@ img {
     display: block;
   }
   #burder:checked + label + .header__blok__about__navigation__menu {
-    display: block;
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
     justify-content: flex-end;
-    position: fixed;
     position: fixed;
     top: 57%;
     left: 2.5%;
@@ -53,8 +45,14 @@ img {
     background: #fff;
     border-radius: 12px 12px 0px 0px;
   }
-  #burder-not:checked + label + .header__blok__about__navigation__menu {
-    display: none;
+  #burder:checked + label + .fa-xmark {
+    display: block;
+    color: #d91d1d;
+    font-size: 32px;
+    position: relative;
+    z-index: 222;
+    top: 350px;
+    left: 30%;
   }
   .header__blok__about__navigation__menu__link {
     font-size: 24px;

@@ -87,9 +87,17 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
 .fa-xmark {
   display: none;
   @include _600() {
-    display: block;
+    // display: block;
+    // color: #d91d1d;
+    // font-size: 32px;
+    // position: relative;
+    // z-index: 222;
+    // top: 350px;
+    // left: 30%;
   }
 }
+//  Оберни Все в лебел или придумай что то с крестом
+
 @media screen and (max-width: 600px) {
   [for="burger"] {
     display: block;
@@ -98,13 +106,11 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     display: block;
   }
   #burder:checked + label + .header__blok__about__navigation__menu {
-    display: block;
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
     justify-content: flex-end;
-    position: fixed;
     position: fixed;
     top: 57%;
     left: 2.5%;
@@ -112,10 +118,16 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     background: #fff;
     border-radius: 12px 12px 0px 0px;
   }
-  #burder-not:checked + label + .header__blok__about__navigation__menu {
-    display: none;
-  }
 
+  #burder:checked + label + .fa-xmark {
+    display: block;
+    color: #d91d1d;
+    font-size: 32px;
+    position: relative;
+    z-index: 222;
+    top: 350px;
+    left: 30%;
+  }
   .header__blok__about__navigation__menu__link {
     font-size: 24px;
     line-height: 29px;
