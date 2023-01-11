@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  max-width: 100%;
+  background: #f5f5fa;
+  padding: 30px 0 0 0;
+}
+.footer__conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 60px 30px;
+}
+@media all and (min-width: 1600px) {
+  .footer__conteiner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 160px 30px;
+  }
+}
+.footer__blok {
+  border-top: 2px solid #e6e6f0;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+@media all and (max-width: 650px) {
+  .footer__blok {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.footer__blok__location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+@media all and (max-width: 650px) {
+  .footer__blok__location {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__blok__location__link {
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width: 650px) {
+  .footer__blok__location__link {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__blok__location__link__place {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+.footer__blok__location__link__maps {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24a3ff;
+}
+.footer__blok__betwwen__point {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: #b3b3ba;
+  margin: 0 10px;
+}
+@media all and (max-width: 650px) {
+  .footer__blok__betwwen__point {
+    display: none;
+  }
+}
+.footer__blok__contact__link {
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width: 650px) {
+  .footer__blok__contact__link {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__blok__contact__link__contact {
+  width: 38px;
+  height: 38px;
+}
+.footer__blok__contact__link__nomber {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #46466e;
+}
+.footer__blok__contact__link__relations {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24a3ff;
+}
+.footer__blok__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #b3b3ba;
+}
+
+.team {
+  max-width: 100%;
+}
+.team__conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.team__text {
+  max-width: 1440px;
+  padding: 0 180px;
+  margin-bottom: 60px;
+}
+.team__text__to__myself {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.team__people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 60px;
+}
+.team__people__persone {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.team__people__persone__img__wrraper {
+  max-height: 400px;
+  max-width: 400px;
+  border-radius: 12px;
+}
+.team__people__persone__link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.team__people__persone__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+  position: relative;
+}
+.team__people__persone__name::before {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  background-color: rgb(55, 55, 226);
+  top: 5px;
+  left: 30px;
+}
+.team__people__persone__name::after {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  background-color: rgb(55, 55, 226);
+  top: 5px;
+  left: 30px;
+}
+.team__people__persone__wrraper {
+  max-height: 32px;
+  max-width: 32px;
+}
+.team__people__persone__appointed {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b3b3ba;
+}/*# sourceMappingURL=Team.css.map */

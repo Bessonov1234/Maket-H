@@ -91,11 +91,17 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
   }
 }
 @media screen and (max-width: 600px) {
+  .label__header {
+    position: relative;
+    z-index: 1;
+  }
+
   [for="burger"] {
     display: block;
   }
   [for="burger-not"] {
     display: block;
+    position: relative;
   }
   #burder:checked + label + .header__blok__about__navigation__menu {
     display: block;
@@ -106,7 +112,7 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     justify-content: flex-end;
     position: fixed;
     position: fixed;
-    top: 57%;
+    top: 57.3%;
     left: 2.5%;
     padding: 64px 12px 12px 12px;
     background: #fff;
@@ -202,6 +208,7 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
 
       @include _768 {
         grid-row: 2/3;
+        z-index: 1;
       }
     }
     &__logo__img {
@@ -344,6 +351,11 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
   }
 }
 .fa-solid {
+  position: absolute;
+  display: block;
+  top: -76px;
+  left: 89vw;
+  z-index: 111;
 }
 .fa-bars {
 }

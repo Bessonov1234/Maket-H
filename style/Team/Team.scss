@@ -1,0 +1,158 @@
+@use "../basic";
+@use "../vareibles";
+// @use "./header";
+@use "../_footer";
+
+// ? main
+
+$main-color: #323264;
+$main-alt-color: #46466e;
+$main-soft-color: #686887;
+
+// ? accept
+
+$Accept: #f0145a;
+
+// ? active
+
+$active-regular: #24a3ff;
+$active-hover: #0085ff;
+$active-regular: #006ccf;
+// ? Grey
+
+$Grey-bg: #f5f5fa;
+$Grey-bg-alt: #ededf7;
+$Grey-text: #b3b3ba;
+$Grey-separator: #e6e6f0;
+
+// ? Gradient
+
+$Gradient: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+$Gradient-soft: linear-gradient(
+  42.01deg,
+  #323264 14.33%,
+  #323264 51.39%,
+  #7a425e 87.53%
+);
+$Gradient-red: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$Gradient-supersoft: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+
+// ! $ Vareibles
+// ! use
+@mixin _1600 {
+  @media all and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin _1024 {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin _768 {
+  @media all and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin _600 {
+  @media all and (max-width: 600px) {
+    @content;
+  }
+}
+@mixin _450 {
+  @media all and (max-width: 450px) {
+    @content;
+  }
+}
+@mixin _375 {
+  @media all and (max-width: 375px) {
+    @content;
+  }
+}
+// ! Mixin
+
+.team {
+  max-width: 100%;
+  &__conteiner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__text {
+    max-width: 1440px;
+    padding: 0 180px;
+    margin-bottom: 60px;
+    &__to__myself {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 46px;
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  &__people {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 60px;
+    &__persone {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      &__img__wrraper {
+        max-height: 400px;
+        max-width: 400px;
+        border-radius: 12px;
+      }
+      &__link {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+      &__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main-color;
+        position: relative;
+        &::before {
+          position: absolute;
+          width: 3px;
+          height: 6px;
+          background-color: rgb(55, 55, 226);
+          top: 5px;
+          left: 30px;
+        }
+        &::after {
+          position: absolute;
+          width: 3px;
+          height: 6px;
+          background-color: rgb(55, 55, 226);
+          top: 5px;
+          left: 30px;
+        }
+      }
+      &__wrraper {
+        max-height: 32px;
+        max-width: 32px;
+      }
+      &__appointed {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #b3b3ba;
+      }
+    }
+  }
+}

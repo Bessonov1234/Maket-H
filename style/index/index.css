@@ -32,11 +32,16 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+  .label__header {
+    position: relative;
+    z-index: 1;
+  }
   [for=burger] {
     display: block;
   }
   [for=burger-not] {
     display: block;
+    position: relative;
   }
   #burder:checked + label + .header__blok__about__navigation__menu {
     display: block;
@@ -47,7 +52,7 @@ img {
     justify-content: flex-end;
     position: fixed;
     position: fixed;
-    top: 57%;
+    top: 57.3%;
     left: 2.5%;
     padding: 64px 12px 12px 12px;
     background: #fff;
@@ -153,6 +158,7 @@ img {
 @media all and (max-width: 900px) {
   .header__blok__logo {
     grid-row: 2/3;
+    z-index: 1;
   }
 }
 .header__blok__wrraper {
@@ -294,6 +300,14 @@ img {
   .fa-sharp {
     display: block;
   }
+}
+
+.fa-solid {
+  position: absolute;
+  display: block;
+  top: -76px;
+  left: 89vw;
+  z-index: 111;
 }
 
 #burder,
