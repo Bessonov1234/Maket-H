@@ -157,6 +157,7 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   gap: 60px;
+  margin-bottom: 60px;
 }
 .team__people__persone {
   display: flex;
@@ -182,20 +183,34 @@ img {
   position: relative;
 }
 .team__people__persone__name::before {
+  content: "";
   position: absolute;
   width: 3px;
-  height: 6px;
+  height: 10px;
   background-color: rgb(55, 55, 226);
-  top: 5px;
-  left: 30px;
+  top: 8px;
+  left: 383px;
+  transform: rotate(314deg);
 }
 .team__people__persone__name::after {
+  content: "";
+  content: "";
   position: absolute;
   width: 3px;
-  height: 6px;
+  height: 10px;
   background-color: rgb(55, 55, 226);
-  top: 5px;
-  left: 30px;
+  top: 14px;
+  left: 383px;
+  transform: rotate(-314deg);
+}
+.team__people__persone__name:hover {
+  color: #f0145a;
+}
+.team__people__persone__name:hover::after {
+  background-color: #f0145a;
+}
+.team__people__persone__name:hover::before {
+  background-color: #f0145a;
 }
 .team__people__persone__wrraper {
   max-height: 32px;

@@ -104,6 +104,7 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     gap: 60px;
+    margin-bottom: 60px;
     &__persone {
       display: flex;
       flex-direction: column;
@@ -126,20 +127,34 @@ $Gradient-red-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
         color: $main-color;
         position: relative;
         &::before {
+          content: "";
           position: absolute;
           width: 3px;
-          height: 6px;
+          height: 10px;
           background-color: rgb(55, 55, 226);
-          top: 5px;
-          left: 30px;
+          top: 8px;
+          left: 383px;
+          transform: rotate(314deg);
         }
         &::after {
+          content: "";
+          content: "";
           position: absolute;
           width: 3px;
-          height: 6px;
+          height: 10px;
           background-color: rgb(55, 55, 226);
-          top: 5px;
-          left: 30px;
+          top: 14px;
+          left: 383px;
+          transform: rotate(-314deg);
+        }
+        &:hover {
+          color: $Accept;
+        }
+        &:hover::after {
+          background-color: $Accept;
+        }
+        &:hover::before {
+          background-color: $Accept;
         }
       }
       &__wrraper {
